@@ -19,6 +19,37 @@
 
 
 <body>
+    <button     
+    style=
+    "position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;"
+    onclick="myFunction()"><img src="bx-moon.svg">
+    </button>
+    
+    <div id="tooltip">
+        <span id="question-mark">?</span>
+        <span id="tooltip-text">Simple Texteditor is a simple alternative of the most popular texteditors. This editor is designed to be the most simple one to begin with coding when you think about it.
+            <br>
+            <br>
+            With this editor, you can also create code for our own chatbot <a href="https://ryanvanderhaak.github.io/Online-Leerhulp/Arya.html">Arya</a>. With our <a href="https://ryanvanderhaak.github.io/Online-Leerhulp/AryaTrainer.html">Arya Trainer</a> you can create code for Arya, without needing experience for coding. Write the input and output and sent this code to us through the Contact-page!
+        <br>
+        <br>
+        Do you wanna create code without the Arya Trainer? That's possible! We use a simple structure for creating data. This works like this:
+        <br>
+            <img src="AryaCodeExample.png" alt="How works the structure of Arya?">
+            <br>
+            <br>
+            The break; element end this piece of data and prevent the chatbot from a loop.
+        <br>
+        <br>
+        With the Simple Texteditor its possible to write code for Arya with the above structure. Just use the JavaScript editor down on this site and sent the code to us. Or use the Arya Trainer without coding-experience.
+        <br>
+        <br>
+        <p id="version-info">Version 1.1 | Last modified: 25 August 2024</p>
+    </span>
+      </div></div>
     <h3>Simple Texteditor</h3>
   <div id="editor-container">
       <div>
@@ -38,18 +69,27 @@
   </div>
   <br>
   <div id="buttons">
-      <button id="run-btn">Run</button>
-      <button id="export-btn">Export</button>
+      <button id="run-btn">Run code</button>
+      <button id="export-btn">Export to .zip</button>
       <select id="theme-selector">
-          <option value="nature">Nature (Default)</option>
-          <option value="dracula">Dracula</option>
+          <option value="nature">Nature</option>
+          <option value="dracula">Vampire</option>
           <option value="monokai">Monokai</option>
-          <option value="elegant">Elegant</option>
+          <option value="elegant">Clean</option>
       </select>
   </div>
   <br>
   <br>
   <iframe id="output"></iframe>
+
+
+  <script>
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+</script>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>

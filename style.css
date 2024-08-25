@@ -3,17 +3,23 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
-  background-color: gray;
+  background-color: rgb(196, 192, 192);
+  transition: 0.7s;
+}
+
+.dark-mode {
+  background-color: #38444d;
+  color: white;
+  transition: 0.7s;
 }
 #editor-container {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  max-width: 1000px;
+  width: 90%;
   font-family: Arial, sans-serif;
 }
 .editor {
-  height: 200px;
+  height: 100%;
   margin: 10px 0;
   font-family: Arial, sans-serif;
 }
@@ -21,6 +27,8 @@ body {
   height: 400px;
   width: 100%;
   border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 10px;
 }
 #buttons {
   display: flex;
@@ -48,11 +56,18 @@ button {
   vertical-align: top;
 }
 
-#theme-selector {
-  background-color: orange;
-  border-radius: 5px;
+button:hover {
+  background-color: rgb(4, 125, 206);
 }
 
+#theme-selector {
+  background-color: orange;
+  border-radius: 25px 10px 25px 10px;
+}
+
+#theme-selector:hover {
+  background-color: rgb(206, 137, 7);
+}
 
 .cm-s-nature .CodeMirror-cursor {
 border-left: 2px solid #0af185;
@@ -90,3 +105,53 @@ color: #584ad2;
 .cm-s-nature .cm-let {
   color: green;
 }
+
+
+
+#tooltip {
+  position: absolute;
+  display: inline-block;
+  right: 10;
+  }
+  
+  #question-mark {
+  cursor: pointer;
+  width: 20px;
+  height: 18.50px;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  right: 10;
+  top: 3;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #f0b30a;
+  }
+  
+  #tooltip-text {
+  visibility: hidden;
+  width: 500px;
+  height: 475px;
+  font-size: 13;
+  background-color: #a38989;
+  color: black;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  z-index: 1;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  }
+  
+  #tooltip:hover #tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  }
+
+  #version-info {
+    font-size: 11;
+  }

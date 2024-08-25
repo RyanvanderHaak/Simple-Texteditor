@@ -50,6 +50,6 @@
 
       zip.generateAsync({ type: "blob" })
           .then(function(content) {
-              saveAs(content, "MySimpleTextEditorProject.zip");
+              saveAs(content, "MyProject.zip");
           });
   });
